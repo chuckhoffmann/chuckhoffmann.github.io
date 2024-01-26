@@ -1,0 +1,13 @@
+body { margin: 0; }
+canvas { display: block; }
+#container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; color: #fff; }
+
+#overlay-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    color: #00ff00; /* Adjust color as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    z-index: 1; /* Ensure it's above the canvas */
+}
