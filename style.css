@@ -1,13 +1,113 @@
-body { margin: 0; }
-canvas { display: block; }
-#container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; color: #fff; }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+}
 
 #overlay-text {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
     transform: translate(-50%, -50%);
-    color: #00ff00; /* Adjust color as needed */
-    font-size: 24px; /* Adjust font size as needed */
-    z-index: 1; /* Ensure it's above the canvas */
+    color: #00ff00;
+    /* Adjust color as needed */
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    /* Adjust font size as needed */
+    z-index: 1;
+    /* Ensure it's above the canvas */
+}
+
+#footer {
+    /* Position at the bottom of the page */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+}
+
+span {
+    /* center text */
+    height: 24px;
+    display: block;
+    text-align: center;
+    color: #00ff00;
+
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    /* Ensure it's above the canvas */
+}
+
+nav a {
+    color: #0f0;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:first-child {
+    display: none;
+}
+
+nav a:hover {
+    color: #ff0;
+    background-color: #333;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    /* Ensure it's above the canvas */
+}
+
+/*Media Queries*/
+@media screen and (max-width: 768px) {
+    nav a:first-child {
+        display: flex;
+    }
+    nav a:not(:first-child) {
+        display: none;
+    }
+}
+
+/*Cell Phone*/
+@media screen and (max-width: 400px) {
+    nav a:first-child {
+        display: block;
+    }
+    nav a:not(:first-child) {
+        display: none;
+    }
 }
